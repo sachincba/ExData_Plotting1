@@ -7,7 +7,9 @@ twoDays$dateTime <- paste(twoDays$Date, twoDays$Time, sep = " ")
 twoDays$dateTime <- strptime(twoDays$dateTime, "%d/%m/%Y %H:%M:%S")
 
 
-plot(twoDays$dateTime, twoDays$Global_active_power, type = 'l')
+plot(twoDays$dateTime, twoDays$Global_active_power, type = 'l', 
+               xlab = '', ylab = "Global Active Power (kilowatts)")
+
 
 dev.copy(png, 'plot2.png')
 
