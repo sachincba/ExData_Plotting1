@@ -6,11 +6,9 @@ twoDays$dateTime <- paste(twoDays$Date, twoDays$Time, sep = " ")
 
 twoDays$dateTime <- strptime(twoDays$dateTime, "%d/%m/%Y %H:%M:%S")
 
-plot1 <- hist(twoDays$Global_active_power)
 
+plot(twoDays$dateTime, twoDays$Global_active_power, type = 'l')
 
-plot(plot1, xlab = "Global Active Power (kilowatts)", ylab = "Frequency", 
-     main = "Global Active Power", col = 'red')
-dev.copy(png, 'plot1.png')
+dev.copy(png, 'plot2.png')
 
 dev.off()
